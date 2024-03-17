@@ -1,5 +1,6 @@
 import HeroSection from "../components/HeroSection";
 import NavBar from "../components/NavBar";
+import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
 function Index() {
@@ -14,6 +15,7 @@ function Index() {
       </div>
       <div className="max-w-6xl mx-auto p-5">
         <Skills/>
+        <Projects/>
       </div>
     </div>
   );
