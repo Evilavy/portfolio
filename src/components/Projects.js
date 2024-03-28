@@ -1,8 +1,8 @@
 import React from "react";
-import { cn } from "../utils/cn.ts"
+import { cn } from "../utils/cn.ts";
 import { SiPhp, SiMysql } from "react-icons/si";
 import Title from "../components/Title";
-import DirectionAwareHover from "../components/ui/direction-aware-hover.tsx"
+import DirectionAwareHover from "../components/ui/direction-aware-hover.tsx";
 
 import GPADImage from "../assets/GPAD.png";
 
@@ -29,13 +29,21 @@ export default function Projects() {
         text="Projets 🎨"
         className="flex flex-col items-center justify-center -rotate-[6deg] mt-20"
       />
-      <div className="grid grid-cols-1 sm:grid-cols-2 pt-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 pt-20 gap-5">
         {projects.map((project, indx) => (
-          <a href={project.link} key={indx}>
+          <a target="blank_" href={project.link} key={indx}>
             <div className={cn("p-5 rounded-md", project.background)}>
-                <DirectionAwareHover imageUrl={project.cover} className="w-full space-y-5">
-
-                </DirectionAwareHover>
+              <DirectionAwareHover
+                imageUrl={project.cover}
+                className="w-full space-y-5"
+              >
+                <h1 className="font-bold text-lg">{project.title}</h1>
+                <div className="flex space-x-2 justify-center">
+                  {project.tech.map((Icon, iconIndex) => (
+                    <Icon className="h-10 w-10" key={iconIndex} />
+                  ))}
+                </div>
+              </DirectionAwareHover>
             </div>
           </a>
         ))}

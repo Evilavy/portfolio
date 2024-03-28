@@ -36,7 +36,7 @@ export const HoverEffect = ({ items, className }) => {
               />
             )}
           </AnimatePresence>
-          <Card className="bg-[#000000] flex items-center justify-center">
+          <Card className="bg-black flex items-center justify-center">
             <CardDescription className="flex items-center justify-center">
               {React.createElement(item.Icon, {
                 className: "w-10 h-10 text-white",
