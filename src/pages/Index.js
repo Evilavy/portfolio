@@ -7,8 +7,8 @@ import Footer from "../components/Footer";
 
 function Index() {
   return (
-    <div className="bg-black text-gray-200 p-5 overflow-hidden">
-      <div className="bg-black bg-grid-white/[0.05] bg-grid relative">
+    <div className="bg-white text-black p-5 overflow-hidden">
+      <div className="bg-white bg-grid-black/[0.05] bg-grid relative">
         <div className="max-w-6xl mx-auto p-5">
           <NavBar />
           <HeroSection />
@@ -21,7 +21,7 @@ function Index() {
         <ITMonitoring/>
       </div>
 
-      <footer className="border-t border-gray-500 mt-24">
+      <footer className="border-t border-gray-200 mt-24">
         <Footer></Footer>
       </footer>
     </div>

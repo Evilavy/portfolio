@@ -6,27 +6,51 @@
     width: 0px;
     height: 0px;
     border-radius: 50%;
-    box-shadow: 0 0 200px 130px #c026d3;
+    box-shadow: 0 0 200px 130px #ECA377;
 }
 
-@keyframes slideInRight {
+.wave {
+    animation-name: wave-animation;
+    /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;
+    /* Change to speed up or slow down */
+    transform-origin: 70% 70%;
+    /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
     0% {
-        transform: translateX(100%);
-        opacity: 0;
+        transform: rotate(0.0deg)
     }
 
-    100% {
-        transform: translateX(0);
-        opacity: 1;
+    10% {
+        transform: rotate(14.0deg)
     }
-}
 
-@keyframes shake {
-    0%, 100% {
-        transform: rotate(-20deg);
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
     }
 
     50% {
-        transform: rotate(20deg);
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
     }
 }

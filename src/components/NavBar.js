@@ -1,10 +1,10 @@
 import React from "react";
-import { SiGithub, SiGmail } from "react-icons/si";
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 
 export default function NavBar() {
   const socials = [
     {
-      Link: "evilavypro@gmail.com",
+      Link: "mailto:evilavypro@gmail.com",
       Label: "Email",
       Icon: SiGmail,
     },
@@ -13,11 +13,16 @@ export default function NavBar() {
       Label: "Github",
       Icon: SiGithub,
     },
+    {
+      Link: "https://www.linkedin.com/in/evilavy-tinga-kotto-404b8a22a",
+      Label: "Linkedin",
+      Icon: SiLinkedin,
+    },
   ];
   return (
     <nav className="py-10 flex justify-between items-center">
-      <h1 className="text-2xl font-bold underline underline-offset-8 decoration-green-500 -rotate-2 z-10">
-        TINGA KOTTO 🧑🏾‍💻
+      <h1 className="text-2xl font-bold underline underline-offset-8 decoration-[#004AAD] rotate-[-2deg] hover:rotate-[4deg] z-10 transition duration-300">
+        TINGA KOTTO Evilavy🧑🏾‍💻
       </h1>
       <div className="flex items-center gap-5 z-10">
         {socials.map((social, index) => {
@@ -25,7 +30,7 @@ export default function NavBar() {
 
           return (
             <a key={index} href={social.Link} alt={social.Label}>
-              <Icon className="text-neutral-100 w-6 h-6 hover:scale-125 transition-all" />
+              <Icon className="text-neutral-500 w-6 h-6 hover:scale-125 transition-all" />
             </a>
           );
         })}

@@ -25,7 +25,7 @@ export const HoverEffect = ({ items, className }) => {
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-green-500 block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-[#ECA377] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.15 } }}
@@ -36,10 +36,10 @@ export const HoverEffect = ({ items, className }) => {
               />
             )}
           </AnimatePresence>
-          <Card className="bg-black flex items-center justify-center">
+          <Card className="bg-gray-300 flex items-center justify-center">
             <CardDescription className="flex items-center justify-center">
               {React.createElement(item.Icon, {
-                className: "w-10 h-10 text-white",
+                className: "w-10 h-10 text-[#77AAEC]",
               })}
             </CardDescription>
             <CardTitle className="">{item.text}</CardTitle>
@@ -54,7 +54,7 @@ export const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-indigo-500 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-[#77AAED] relative z-20",
         className
       )}
     >
